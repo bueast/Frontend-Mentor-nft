@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    width: 320px;
+    height: 575px;
+    margin: 3rem 0rem;
+    border-radius: 25px;
+    padding: 1.5rem;
+    background-color: hsl(216, 50%, 16%);
+}
+
+@media (max-width:375px) {
+    .content {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+#img1 {
+    border-radius: 10px;
+}
+
+.equilibrium:hover, .bueast:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+  }
+
+  #img1:hover {
+    opacity: 0.3;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+}
+
+#img1::before {
+    /* Set the new SVG image as the content of the ::before pseudo-element */
+    content: url(./images/icon-clock.svg);
+    background-color: hsl(178, 100%, 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* This prevents the SVG image from blocking clicks on the original image */
+    opacity: 0; /* Initially hide the SVG image */
+    transition: opacity 0.3s; /* Add a transition to the opacity property */
+  }
+  
+#img1:hover::before {
+    opacity: 1;
+}
+h2 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: .5rem 0rem 0rem 0rem;
+}
+
+p {
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    margin: 0rem 0rem 1rem 0rem;
+    
+}
+
+.eth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0rem 2rem 0rem;
+    padding: 0rem 0rem 2rem 0rem;
+    border-bottom: 1px solid hsl(215, 51%, 70%);
+}
+
+.eth .value {
+    color: hsl(178, 100%, 50%);
+}
+
+.eth .time {
+    color: hsl(215, 51%, 70%);
+}
+
+.btm {
+    margin: -1rem 0rem 1rem 0rem;
+    display: flex;
+    align-items: center;
+    color: hsl(215, 51%, 70%)
+}
+
+.btm-img {
+    width: 2rem;
+    height: auto;
+}
+
+.bueast {
+    color: white;
+    margin-left: .25rem;
+}
+
+svg {
+    -ms-transform-origin-x: -1;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: -.75rem;
+    color:hsl(215, 51%, 70%)
+
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
